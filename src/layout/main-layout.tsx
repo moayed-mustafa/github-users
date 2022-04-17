@@ -6,11 +6,12 @@ interface ILayout {
   children: JSX.Element
 }
 const Layout = ({ children }: ILayout) => {
+
   return (
     <CssBaseline>
       <Container maxWidth="sm">
         <Box sx={{
-          bgcolor: "orangered",
+          bgcolor: "background.paper",
           height: "100vh",
           display: "flex",
           flexDirection: "column",
