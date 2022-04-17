@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 const _LIGHT = 'light';
 const _DARK = 'dark';
@@ -17,11 +17,9 @@ const _ThemeProvider = ({ children }) => {
   const [mode, setMode] = useState(_DARK)
 
   const toggleMode = () => {
-    console.log({ mode })
     mode === _LIGHT ? setMode(_DARK) :
       setMode(_LIGHT)
   }
-
 
   return (
     <ThemeContext.Provider

@@ -15,5 +15,4 @@ export const Colors = {
     lightGrey: () => "#1E2A47",
     red: () => "#F74646"
   },
-
 }

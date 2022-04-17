@@ -16,7 +16,6 @@ function App() {
         <Typography >Hello div finder</Typography>
       </Layout>
     </ThemeProvider>
-
   );
 }
 
