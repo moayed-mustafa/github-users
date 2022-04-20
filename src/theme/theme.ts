@@ -4,11 +4,11 @@ import { PaletteMode } from '@mui/material';
 
 const getDesignTokens = (mode: PaletteMode) => ({
   palette: {
+    primary: { main: Colors.light.azureBlue() },
+    secondary: { main: Colors.light.lightGrey() },
+    error: { main: Colors.light.red() },
     mode,
     ...(mode === "light" ? {
-      primary: { main: Colors.light.azureBlue() },
-      secondary: { main: Colors.light.lightGrey() },
-      error: { main: Colors.light.red() },
       background: {
         default: Colors.light.lightGrey(),
         paper: Colors.light.white(),
@@ -23,9 +23,6 @@ const getDesignTokens = (mode: PaletteMode) => ({
         ].join(','),
       },
     } : {
-      primary: { main: Colors.light.azureBlue() },
-      secondary: { main: Colors.light.lightGrey() },
-      error: { main: Colors.light.red() },
       background: {
         default: Colors.dark.darkGrey(),
         paper: Colors.dark.lightGrey(),
@@ -40,7 +37,6 @@ const getDesignTokens = (mode: PaletteMode) => ({
           ].join(','),
         },
     })
-
   }
 });
 
