@@ -17,6 +17,11 @@ const getDesignTokens = (mode: PaletteMode) => ({
         primary: Colors.light.darkGrey(),
         secondary: Colors.light.lightGrey(),
       },
+      typography: {
+        fontFamily: [
+          'space-mono monospace',
+        ].join(','),
+      },
     } : {
       primary: { main: Colors.light.azureBlue() },
       secondary: { main: Colors.light.lightGrey() },
@@ -28,7 +33,12 @@ const getDesignTokens = (mode: PaletteMode) => ({
       text: {
         primary: Colors.dark.white(),
         secondary: Colors.dark.lightGrey(),
-      },
+        },
+        typography: {
+          fontFamily: [
+            'space-mono monospace',
+          ].join(','),
+        },
     })
 
   }

@@ -1,6 +1,8 @@
 export const Colors = {
+  // 60ABFF
   light: {
     azureBlue: () => "#0079FF",
+    hoverBlue: () => "#60ABFF",
     lightGrey: () => "#697C9A",
     lightBlue: () => "#4B6A9B",
     darkGrey: () => "#2b3442",
