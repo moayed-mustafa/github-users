@@ -1,12 +1,9 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import { IChildren } from '../models/children.ts';
 
-interface ILayout {
-  children: JSX.Element
-}
-const Layout = ({ children }: ILayout) => {
-
+const Layout = ({ children }: IChildren) => {
   return (
     <CssBaseline>
       <Container maxWidth="sm">
