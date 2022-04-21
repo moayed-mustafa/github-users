@@ -8,7 +8,7 @@ const Layout = ({ children }: IChildren) => {
     <CssBaseline>
       <Container maxWidth="sm">
         <Box sx={{
-          bgcolor: "background.paper",
+          bgcolor: "background.default",
           height: "100vh",
           display: "flex",
           flexDirection: "column",

@@ -5,7 +5,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import { buildTheme } from "./theme/theme.ts";
 import Header from "./components/header.tsx";
 
-
 function App() {
   const { mode } = useContext(ThemeContext);
   const theme = buildTheme(mode);
@@ -18,6 +17,4 @@ function App() {
   );
 }
 
-
 export default App;
-

@@ -1,17 +1,13 @@
 import React, { useContext } from "react"
 import Box from '@mui/material/Box';
-import { Button, styled, Typography } from "@mui/material";
-import { Colors } from "../theme/colors.ts"
+import { styled, Typography } from "@mui/material";
 import { ThemeContext } from "../context/theme-context.tsx";
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-
-// todo: Change the primary and secondary colors, beacause buttons/icons
-// ?are messed up right now, also make a strings file
+import { strings } from "../strings.ts";
 
 const Header = () => {
   const { toggleMode, mode } = useContext(ThemeContext);
-
   return (
     <Box sx={{
       width: "100%",
@@ -20,23 +16,30 @@ const Header = () => {
       padding: "8px",
       boxSizing: "border-box"
     }}>
-      <Typography variant="h6" >devfinder</Typography>
-      <CustomButton color="secondary" size='small' variant="text" onClick={() => toggleMode()}>
-        {mode === "dark" ? "light" : "dark"}{
+      <Typography variant="h2" >{strings.mainTitle}</Typography>
+      <Customtypo onClick={toggleMode} variant="h3" >{mode === "dark" ? strings.light : strings.dark}
+        {
           mode === "dark" ?
-            <WbSunnyIcon color="secondary" sx={{ marginLeft: "8px" }} ></WbSunnyIcon> :
-            <NightlightRoundIcon color="secondary" sx={{ marginLeft: "8px" }} ></NightlightRoundIcon>
+            <Typography>
+              <WbSunnyIcon sx={{ marginLeft: "8px", cursor: "pointer" }} ></WbSunnyIcon>
+            </Typography> :
+            <Typography>
+              <NightlightRoundIcon sx={{ marginLeft: "8px", cursor: "pointer" }} ></NightlightRoundIcon>
+            </Typography>
         }
-      </CustomButton>
+      </Customtypo>
     </Box>
   )
 }
 
-const CustomButton = styled(Button)({
+const Customtypo = styled(Typography)(({ theme }) => ({
+  cursor: "pointer",
   borderRadius: "10px",
+  display: "flex",
   '&:hover': {
-    backgroundColor: Colors.light.hoverBlue(),
+    color: theme.palette.text.secondary,
+    transition: "color ease-in-out 400ms"
   },
-});
+}));
 
 export default Header;

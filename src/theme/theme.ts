@@ -15,12 +15,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
       },
       text: {
         primary: Colors.light.darkGrey(),
-        secondary: Colors.light.lightGrey(),
-      },
-      typography: {
-        fontFamily: [
-          'space-mono monospace',
-        ].join(','),
+        secondary: Colors.light.lighterGrey(),
       },
     } : {
       background: {
@@ -31,13 +26,44 @@ const getDesignTokens = (mode: PaletteMode) => ({
         primary: Colors.dark.white(),
         secondary: Colors.dark.lightGrey(),
         },
-        typography: {
-          fontFamily: [
-            'space-mono monospace',
-          ].join(','),
-        },
     })
-  }
+  },
+  typography: {
+    fontFamily: [
+      'space-mono monospace',
+
+    ].join(','),
+    h1: {
+      fontSize: '26px',
+      fontFamily: 'monospace',
+      lineHeight: "38px",
+      fontWeight: "bold"
+    },
+    h2: {
+      fontSize: '22px',
+      fontFamily: 'monospace',
+      lineHeight: "33px",
+      fontWeight: "bold"
+    },
+    h3: {
+      fontSize: '16px',
+      fontFamily: 'monospace',
+      lineHeight: "24px",
+      fontWeight: "bold"
+    },
+    h4: {
+      fontSize: '13px',
+      fontFamily: 'monospace',
+      lineHeight: "20px",
+      fontWeight: "bold",
+    },
+    p: {
+      fontSize: '10px',
+      fontFamily: 'monospace',
+      lineHeight: "38px",
+      fontWeight: "bold"
+    },
+  },
 });
 
 export const buildTheme = (mode: PaletteMode) => {
