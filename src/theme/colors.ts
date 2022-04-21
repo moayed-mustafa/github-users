@@ -1,5 +1,4 @@
 export const Colors = {
-  // 60ABFF
   light: {
     azureBlue: () => "#0079FF",
     hoverBlue: () => "#60ABFF",
@@ -17,4 +16,4 @@ export const Colors = {
     lightGrey: () => "#1E2A47",
     red: () => "#F74646"
   },
-}
+};
