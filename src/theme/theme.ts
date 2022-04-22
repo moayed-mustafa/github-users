@@ -10,7 +10,7 @@ const getDesignTokens = (mode: PaletteMode) => ({
     mode,
     ...(mode === "light" ? {
       background: {
-        default: Colors.light.lightGrey(),
+        default: Colors.light.lighterGrey(),
         paper: Colors.light.white(),
       },
       text: {
@@ -64,6 +64,30 @@ const getDesignTokens = (mode: PaletteMode) => ({
       fontWeight: "bold"
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "10px",
+          fontFamily: "monospace",
+          fontSize: "13px",
+          fontWeight: "bold",
+          '&:hover': {
+            background: Colors.light.hoverBlue(),
+          }
+        }
+      }
+    },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          fontWeight: "light",
+          fontsize: "8px",
+          fontFamily: "monospace",
+        }
+      }
+    },
+  }
 });
 
 export const buildTheme = (mode: PaletteMode) => {

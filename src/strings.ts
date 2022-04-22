@@ -1,5 +1,7 @@
 export const strings = {
   mainTitle: "devfinder",
   light: "Light",
-  dark: "Dark"
+  dark: "Dark",
+  error: "No results",
+  search: "Search"
 };
