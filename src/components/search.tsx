@@ -21,7 +21,6 @@ const SearchBar = () => {
       <Typography color="error" variant="h4">{strings.error}</Typography>
       <Button sx={{ margin: "0 2px 0 16px" }} variant="contained">{strings.search}</Button>
     </Paper>
-
   )
 }
 
