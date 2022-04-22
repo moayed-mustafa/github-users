@@ -37,7 +37,7 @@ const Customtypo = styled(Typography)(({ theme }) => ({
   borderRadius: "10px",
   display: "flex",
   '&:hover': {
-    color: theme.palette.text.secondary,
+    color: theme.palette.secondary.main,
     transition: "color ease-in-out 400ms"
   },
 }));
