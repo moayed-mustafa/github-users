@@ -37,31 +37,36 @@ const getDesignTokens = (mode: PaletteMode) => ({
       fontSize: '26px',
       fontFamily: 'monospace',
       lineHeight: "38px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      whiteSpace: 'nowrap'
     },
     h2: {
       fontSize: '22px',
       fontFamily: 'monospace',
       lineHeight: "33px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      whiteSpace: 'nowrap'
     },
     h3: {
       fontSize: '16px',
       fontFamily: 'monospace',
       lineHeight: "24px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      whiteSpace: 'nowrap'
     },
     h4: {
       fontSize: '13px',
       fontFamily: 'monospace',
       lineHeight: "20px",
       fontWeight: "bold",
+      whiteSpace: 'nowrap'
     },
     p: {
       fontSize: '10px',
       fontFamily: 'monospace',
       lineHeight: "38px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      whiteSpace: 'nowrap'
     },
   },
   components: {
