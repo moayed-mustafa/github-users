@@ -6,8 +6,6 @@
     "explainFiles": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    // "suppressImplicitAnyIndexErrors": true,
-    // "strictNullChecks": false,
     "paths": {
       "~*": [
         "./*"

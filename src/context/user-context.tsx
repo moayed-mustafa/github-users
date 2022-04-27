@@ -1,5 +1,3 @@
-
-
 import React, { createContext, useEffect, useState } from "react";
 import { IUser } from "../models/IUser"
 import { placeHolderData } from "../data/data"
@@ -16,7 +14,6 @@ export const UserContext = createContext<UserContextModel>({
   setUser: () => { },
   loading: false,
   setLoading: () => { }
-
 });
 
 const UserProvider = ({ children }) => {

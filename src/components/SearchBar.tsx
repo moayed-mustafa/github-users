@@ -5,7 +5,7 @@ import { strings } from "../strings";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import { USERSAPI } from "../api/agents"
-import { IUser } from "@/models/IUser";
+import { IUser } from "../models/IUser";
 import { UserContext } from "../context/user-context";
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -20,6 +20,7 @@ const SearchBar = () => {
     const { value } = e.target;
     setFormValues(value);
   }
+
   const handleClick = async () => {
     try {
       if (formValues === emptyString) {

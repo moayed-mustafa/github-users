@@ -8,7 +8,6 @@ import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import UserProvider from './context/user-context';
 
-
 function App() {
   const { mode } = useContext(ThemeContext);
   const theme = buildTheme(mode);
