@@ -1,21 +1,27 @@
-import Layout from "./layout/main-layout.tsx";
+import React from 'react'
+import Layout from "./layout/Layout";
 import { useContext } from "react";
-import { ThemeContext } from "./context/theme-context.tsx";
+import { ThemeContext } from "./context/theme-context";
 import { ThemeProvider } from '@mui/material/styles';
-import { buildTheme } from "./theme/theme.ts";
-import Header from "./components/header.tsx";
-import SearchBar from "./components/search.tsx"
+import { buildTheme } from "./theme/theme";
+import Header from "./components/Header";
+import SearchBar from "./components/SearchBar";
+import UserProvider from './context/user-context';
 
 function App() {
   const { mode } = useContext(ThemeContext);
   const theme = buildTheme(mode);
   return (
+    <UserProvider>
     <ThemeProvider theme={theme}>
-      <Layout>
+        <Layout>
+          <>
         <Header />
         <SearchBar />
+          </>
       </Layout>
     </ThemeProvider>
+    </UserProvider>
   );
 }
 

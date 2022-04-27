@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { Colors } from "./colors.ts"
+import { Colors } from "./colors"
 import { PaletteMode } from '@mui/material';
 
 const getDesignTokens = (mode: PaletteMode) => ({
@@ -7,8 +7,9 @@ const getDesignTokens = (mode: PaletteMode) => ({
     primary: { main: Colors.light.azureBlue() },
     secondary: { main: Colors.light.lightGrey() },
     error: { main: Colors.light.red() },
-    mode,
-    ...(mode === "light" ? {
+    info: { main: Colors.dark.darkGrey() },
+    mode: 'light' as PaletteMode,
+    ...(mode === 'light' ? {
       background: {
         default: Colors.light.lighterGrey(),
         paper: Colors.light.white(),
@@ -37,31 +38,36 @@ const getDesignTokens = (mode: PaletteMode) => ({
       fontSize: '26px',
       fontFamily: 'monospace',
       lineHeight: "38px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      WhiteSpace: 'nowrap'
     },
     h2: {
       fontSize: '22px',
       fontFamily: 'monospace',
       lineHeight: "33px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      WhiteSpace: 'nowrap'
     },
     h3: {
       fontSize: '16px',
       fontFamily: 'monospace',
       lineHeight: "24px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      WhiteSpace: 'nowrap'
     },
     h4: {
       fontSize: '13px',
       fontFamily: 'monospace',
       lineHeight: "20px",
       fontWeight: "bold",
+      WhiteSpace: 'nowrap'
     },
-    p: {
+    body1: {
       fontSize: '10px',
       fontFamily: 'monospace',
       lineHeight: "38px",
-      fontWeight: "bold"
+      fontWeight: "bold",
+      WhiteSpace: 'nowrap'
     },
   },
   components: {
