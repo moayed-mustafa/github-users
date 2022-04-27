@@ -8,6 +8,7 @@ import { USERSAPI } from "../api/agents"
 import { IUser } from "../models/IUser";
 import { UserContext } from "../context/user-context";
 import CircularProgress from '@mui/material/CircularProgress';
+import styled from "@emotion/styled";
 
 const SearchBar = () => {
   const emptyString = '';
@@ -20,11 +21,19 @@ const SearchBar = () => {
     const { value } = e.target;
     setFormValues(value);
   }
+  const handleClear = (e) => {
+    const { parentElement } = e.target;
+    const inputParent = parentElement.children[1];
+    const input = inputParent.children[0]
+    input.value = emptyString
+    setFormValues(emptyString);
+    setError(emptyString)
+  }
 
   const handleClick = async () => {
     try {
       if (formValues === emptyString) {
-        setError("username is required");
+        setError(strings.required);
         return;
       }
       setLoading(true);
@@ -52,17 +61,25 @@ const SearchBar = () => {
       </IconButton>
       <InputBase sx={{ width: "60%" }} onChange={handleFormInput} />
       {error && <Typography sx={{ padding: "0 8px" }} color="error" variant="h4">{error}</Typography>}
-      <Button onClick={handleClick} sx={{
-        margin: "0 2px 0 auto",
-        height: "34.75px",
-        width: "78.8125px"
-      }}
-        variant="contained">
-        {loading ? <CircularProgress color="info" size={25} />
-          : strings.search}
-      </Button>
+      {
+        error === strings.error ?
+          <StyledButton onClick={handleClear} variant="contained">{strings.clear} </StyledButton>
+          :
+
+          <StyledButton onClick={handleClick}
+            variant="contained">
+            {loading ? <CircularProgress color="info" size={25} />
+              : strings.search}
+          </StyledButton>
+      }
     </Paper>
   )
 }
+
+const StyledButton = styled(Button)({
+  margin: "0 2px 0 auto",
+  height: "34.75px",
+  width: "78.8125px"
+})
 
 export default SearchBar

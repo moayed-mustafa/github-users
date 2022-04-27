@@ -4,5 +4,12 @@ export const strings = {
   dark: "Dark",
   error: "No results",
   search: "Search",
-  noBio: "This profile has no bio"
+  noBio: "This profile has no bio",
+  joined: "Joined",
+  repos: "Repos",
+  followers: "Followers",
+  following: "Following",
+  notAvailable: "not available",
+  clear: "Clear",
+  required: "username is required"
 };
