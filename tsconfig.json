@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "jsx": "react",
+    "target": "es5",
+    "explainFiles": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    // "suppressImplicitAnyIndexErrors": true,
+    // "strictNullChecks": false,
+    "paths": {
+      "~*": [
+        "./*"
+      ],
+      "/*": [
+        "./*"
+      ],
+      "@/components*": [
+        "./src/components/*"
+      ],
+      "@/context*": [
+        "./src/context/*"
+      ],
+      "@/models*": [
+        "./src/models/*"
+      ],
+      "@/api*": [
+        "./src/api/*"
+      ],
+    }
+  }
+}

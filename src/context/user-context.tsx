@@ -1,8 +1,8 @@
 
 
-import { createContext, useEffect, useState } from "react";
-import { IUser } from "../models/user-model.tsx"
-import { placeHolderData } from "../data/data.tsx"
+import React, { createContext, useEffect, useState } from "react";
+import { IUser } from "../models/IUser"
+import { placeHolderData } from "../data/data"
 
 interface UserContextModel {
   user: IUser,
@@ -12,7 +12,7 @@ interface UserContextModel {
 };
 
 export const UserContext = createContext<UserContextModel>({
-  user: {},
+  user: null,
   setUser: () => { },
   loading: false,
   setLoading: () => { }
@@ -20,16 +20,16 @@ export const UserContext = createContext<UserContextModel>({
 });
 
 const UserProvider = ({ children }) => {
-  const [user, setUser] = useState<IUser>({});
+  const [user, setUser] = useState<IUser>();
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     setUser(placeHolderData)
     user ? setLoading(false) : setLoading(true)
-  }, [])
+  }, [user])
 
   return (
-    < UserContext.Provider value={{
+    <UserContext.Provider value={{
       user,
       setUser,
       loading,

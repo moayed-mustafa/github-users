@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react"
 import SearchIcon from '@mui/icons-material/Search';
 import { Button, Paper, Typography } from "@mui/material";
-import { strings } from "../strings.ts";
+import { strings } from "../strings";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
-import { USERSAPI } from "../api/agents.ts"
-import { IUser } from "../models/user-model.ts";
-import { UserContext } from "../context/user-context.tsx";
+import { USERSAPI } from "../api/agents"
+import { IUser } from "@/models/IUser";
+import { UserContext } from "../context/user-context";
 import CircularProgress from '@mui/material/CircularProgress';
 
 const SearchBar = () => {
@@ -57,7 +57,7 @@ const SearchBar = () => {
         width: "78.8125px"
       }}
         variant="contained">
-        {loading ? <CircularProgress color="error" size={25} />
+        {loading ? <CircularProgress color="info" size={25} />
           : strings.search}
       </Button>
     </Paper>

@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
 import Box from '@mui/material/Box';
 import { styled, Typography } from "@mui/material";
-import { ThemeContext } from "../context/theme-context.tsx";
+import { ThemeContext } from "../context/theme-context";
 import NightlightRoundIcon from '@mui/icons-material/NightlightRound';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import { strings } from "../strings.ts";
+import { strings } from "../strings";
 
 const Header = () => {
   const { toggleMode, mode } = useContext(ThemeContext);
