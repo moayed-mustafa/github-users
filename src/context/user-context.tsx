@@ -21,8 +21,15 @@ const UserProvider = ({ children }) => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    setUser(placeHolderData)
-    user ? setLoading(false) : setLoading(true)
+  }, [])
+  useEffect(() => {
+    if (user) {
+      setLoading(false)
+      setUser(user)
+    } else {
+      setUser(placeHolderData)
+    }
+
   }, [user])
 
   return (

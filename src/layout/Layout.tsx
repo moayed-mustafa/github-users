@@ -21,7 +21,7 @@ const Layout = ({ children }: IChildren) => {
           },
           marginTop: {
             sm: 0,
-            md: "-12rem"
+            md: "-4rem"
           }
         }}>
           {children}
