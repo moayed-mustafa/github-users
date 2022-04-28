@@ -21,16 +21,12 @@ const SearchBar = () => {
     const { value } = e.target;
     setFormValues(value);
   }
-  const handleClear = (e) => {
-    const { parentElement } = e.target;
-    const inputParent = parentElement.children[1];
-    const input = inputParent.children[0]
-    input.value = emptyString
+  const handleClear = () => {
     setFormValues(emptyString);
     setError(emptyString)
   }
 
-  const handleClick = async () => {
+  const hanleSearch = async () => {
     try {
       if (formValues === emptyString) {
         setError(strings.required);
@@ -59,14 +55,14 @@ const SearchBar = () => {
       <IconButton >
         <SearchIcon color="primary" />
       </IconButton>
-      <InputBase sx={{ width: "60%" }} onChange={handleFormInput} />
+      <InputBase sx={{ width: "60%" }} onChange={handleFormInput} value={formValues} />
       {error && <Typography sx={{ padding: "0 8px" }} color="error" variant="h4">{error}</Typography>}
       {
         error === strings.error ?
           <StyledButton onClick={handleClear} variant="contained">{strings.clear} </StyledButton>
           :
 
-          <StyledButton onClick={handleClick}
+          <StyledButton onClick={hanleSearch}
             variant="contained">
             {loading ? <CircularProgress color="info" size={25} />
               : strings.search}
