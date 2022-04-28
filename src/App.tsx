@@ -7,6 +7,7 @@ import { buildTheme } from "./theme/theme";
 import Header from "./components/Header";
 import SearchBar from "./components/SearchBar";
 import UserProvider from './context/user-context';
+import UserCard from './components/UserCard';
 
 function App() {
   const { mode } = useContext(ThemeContext);
@@ -17,7 +18,8 @@ function App() {
         <Layout>
           <>
         <Header />
-        <SearchBar />
+            <SearchBar />
+            <UserCard />
           </>
       </Layout>
     </ThemeProvider>

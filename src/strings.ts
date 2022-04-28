@@ -3,5 +3,13 @@ export const strings = {
   light: "Light",
   dark: "Dark",
   error: "No results",
-  search: "Search"
+  search: "Search",
+  noBio: "This profile has no bio",
+  joined: "Joined",
+  repos: "Repos",
+  followers: "Followers",
+  following: "Following",
+  notAvailable: "not available",
+  clear: "Clear",
+  required: "username is required"
 };
